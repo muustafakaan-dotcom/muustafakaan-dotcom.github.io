@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Colova app icon: three game rings with gaps, a ball waiting in the inner gap.
+       Rings stay inside Android's adaptive-icon safe zone (r ≤ 338). -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0" stop-color="#151826"/>
+      <stop offset="1" stop-color="#07080c"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <g fill="none" stroke-width="34" stroke-linecap="round">
+    <!-- empty tracks -->
+    <circle cx="512" cy="512" r="300" stroke="#232735"/>
+    <circle cx="512" cy="512" r="226" stroke="#232735"/>
+    <circle cx="512" cy="512" r="152" stroke="#232735"/>
+    <g filter="url(#glow)">
+      <!-- dasharray = arc length, circumference; rotate = start angle (clockwise from 3 o'clock) -->
+      <circle cx="512" cy="512" r="300" stroke="#7C5CFC" stroke-dasharray="1545 1885" transform="rotate(42 512 512)"/>
+      <circle cx="512" cy="512" r="226" stroke="#4ECDC4" stroke-dasharray="1183 1420" transform="rotate(212 512 512)"/>
+      <circle cx="512" cy="512" r="152" stroke="#FF6B6B" stroke-dasharray="610 955" transform="rotate(112 512 512)"/>
+    </g>
+  </g>
+
+  <!-- ball in the inner ring's gap -->
+  <circle cx="637" cy="599" r="34" fill="#FFE66D" stroke="#ffffff" stroke-width="10" filter="url(#glow)"/>
+</svg>
